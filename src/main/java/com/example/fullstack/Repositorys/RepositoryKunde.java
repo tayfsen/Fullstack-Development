@@ -20,5 +20,5 @@ public interface RepositoryKunde extends JpaRepository<Kunde,Long> {
 
     int deleteById(UUID id);
 
-
+    int updateRechnungById(UUID id, Kunde kundeToUpdate);
 }

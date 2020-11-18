@@ -15,7 +15,7 @@ public class AppControllerRechnung {
 
     private final RechnungService rechnungService;
 
-    @Autowired
+
     public AppControllerRechnung(RechnungService rechnungService)
     {
     this.rechnungService = rechnungService;
@@ -37,6 +37,11 @@ public class AppControllerRechnung {
     public void deleteRechnungById(@PathVariable("id") UUID id)
     {
         rechnungService.deleteRechnung(id);
+    }
+    @PutMapping(path = "{id}")
+    public void updateRechnung(@PathVariable("id") UUID id, Rechnung productToUpdate)
+    {
+        rechnungService.updateRechnungById(id, productToUpdate);
     }
 
 }

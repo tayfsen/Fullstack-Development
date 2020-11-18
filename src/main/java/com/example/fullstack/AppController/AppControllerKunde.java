@@ -17,7 +17,7 @@ public class AppControllerKunde {
     private final KundenService kundenService;
 
 
-    @Autowired
+
     public AppControllerKunde(KundenService kundenService)
     {
     this.kundenService = kundenService;

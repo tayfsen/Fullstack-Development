@@ -25,5 +25,6 @@ public interface RepositoryRechnung extends JpaRepository<Rechnung, Long> {
     Optional<Rechnung> selectRechnungById();
 
     int deleteById(UUID id);
+    int updateRechnungById(UUID id, Rechnung rechnung);
 
 }

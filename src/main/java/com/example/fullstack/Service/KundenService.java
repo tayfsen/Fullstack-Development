@@ -1,6 +1,7 @@
 package com.example.fullstack.Service;
 
 import com.example.fullstack.Model.Kunde;
+import com.example.fullstack.Model.Rechnung;
 import com.example.fullstack.Repositorys.RepositoryKunde;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,6 +39,10 @@ public class KundenService {
     public int deleteKunde (UUID id)
     {
         return repositoryKunde.deleteById(id);
+    }
+
+    public int updateKundeById(UUID id, Kunde kundeToUpdate) {
+        return repositoryKunde.updateRechnungById(id, kundeToUpdate);
     }
 
 }

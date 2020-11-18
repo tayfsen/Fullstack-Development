@@ -41,4 +41,7 @@ public class RechnungService {
         return repositoryRechnung.deleteById(id);
     }
 
+    public int updateRechnungById(UUID id, Rechnung rechnungToUpdate) {
+        return repositoryRechnung.updateRechnungById(id, rechnungToUpdate);
+    }
 }
