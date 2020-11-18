@@ -1,9 +1,6 @@
 package com.example.fullstack.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Rechnung {
@@ -12,6 +9,8 @@ public class Rechnung {
     private String Rechnungsnummer;
     private String Rechnungsdatum;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Kunde kunde;
 
     public void setId(String id) {
         this.id = id;

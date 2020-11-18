@@ -1,6 +1,8 @@
 package com.example.fullstack.Repositorys;
 
 import com.example.fullstack.Model.Rechnung;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

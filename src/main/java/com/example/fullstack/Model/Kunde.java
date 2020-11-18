@@ -3,6 +3,7 @@ package com.example.fullstack.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 
 @Entity
@@ -11,6 +12,9 @@ public class Kunde {
     private String id;
     private String Nachname;
     private String Vorname;
+
+
+    @OneToMany
     private List<Rechnung> rechnungen;
 
     @Id
